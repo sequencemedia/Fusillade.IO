@@ -28,8 +28,8 @@ import {
 
 nconf
   .argv().env()
-  .defaults(defaults)
   .file({ file: nconf.get('file') || 'config.json' })
+  .defaults(defaults)
   .required(required)
 
 /**
