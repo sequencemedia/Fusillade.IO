@@ -1,8 +1,8 @@
 # Fusillade.IO
 
-`fusillade` is a Promise interface to the load-testing tool `artillery`. 
+Fusillade is a Promise interface to the load-testing tool Artillery.
 
-Fusillade executes Artillery scripts and generates Artillery reports, then stores the results in `MongoDB` and dispatches notifications by email. 
+Fusillade executes Artillery scripts and generates Artillery reports, then stores the results in `MongoDB` and dispatches notifications by email.
 
 You can [read about Artillery.IO on GitHub](https://github.com/shoreditch-ops/artillery).
 
@@ -22,15 +22,15 @@ Fusillade is dependent  on `MongoDB` which you should install (and start) separa
 var fusillade = require('fusillade').fusillade;
 
 fusillade()
-	.then(function () { console.log('Done') })
-	.catch(function (e) { console.log('Error, e.message) });
+  .then(function () { console.log('Done') })
+  .catch(function (e) { console.log('Error, e.message) });
 ```
 It should be configured with a JSON object which resides in your application root:
 ```
 {
   "fusillade": { 
-  	"src": "/path/to/your/artillery/scripts",
-  	"log": "/path/for/artillery/artifacts"
+    "src": "/path/to/your/artillery/scripts",
+    "log": "/path/for/artillery/artifacts"
   },
   "mongo": {
     "uri": "mongodb://localhost:27017/fusillade",
@@ -77,11 +77,11 @@ Fusillade also implements `mongoose` models. You can override them by passing di
 ```
 fusillade({ 
   models: { 
-	HtmlModel: YourHtmlModel,
-	HtmlListModel: YourHtmlListModel,
-	JsonModel: YourJsonModel,
-	JsonListModel: YourJsonListModel,
-	ExceptionModel: YourExceptionModel
+    HtmlModel: YourHtmlModel,
+    HtmlListModel: YourHtmlListModel,
+    JsonModel: YourJsonModel,
+    JsonListModel: YourJsonListModel,
+    ExceptionModel: YourExceptionModel
   }
 })
 ```
