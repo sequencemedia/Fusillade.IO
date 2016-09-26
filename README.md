@@ -28,7 +28,7 @@ fusillade()
 It should be configured with a JSON object which resides in your application root:
 ```
 {
-  "fusillade": { 
+  "fusillade": {
     "src": "/path/to/your/artillery/scripts",
     "log": "/path/for/artillery/artifacts"
   },
@@ -62,7 +62,7 @@ All of these attributes are **required**, but the `fusillade` section of the con
 
 ```
 {
-  "fusillade": { 
+  "fusillade": {
     "src": "./fusillade/src",
     "log": "./fusillade/log"
   }
@@ -75,8 +75,8 @@ fusillade({ src: '/a/different/src/path', log: '/a/different/log/path' })
 
 Fusillade also implements `mongoose` models. You can override them by passing different models as parameters to the function, instead:
 ```
-fusillade({ 
-  models: { 
+fusillade({
+  models: {
     HtmlModel: YourHtmlModel,
     HtmlListModel: YourHtmlListModel,
     JsonModel: YourJsonModel,
