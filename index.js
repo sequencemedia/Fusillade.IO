@@ -1,3 +1,3 @@
-require('babel-register') // ({ ignore: /!(Fusillade.IO\/lib)|!(fusillade-io\/lib)/ })
+require('babel-register')({ ignore: /!(fusillade)/ })
 
 module.exports = require('./fusillade')
