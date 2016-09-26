@@ -56,7 +56,6 @@ It should be configured with a JSON object which resides in your application roo
     }
   }
 }
-
 ```
 All of these attributes are **required**, but the `fusillade` section of the configuration object has defaults:
 
