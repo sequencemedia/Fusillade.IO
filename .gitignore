@@ -1,0 +1,5 @@
+**/node_modules/*
+fusillade/log/html
+fusillade/log/json
+fusillade/src/**/*.json
+config.json
