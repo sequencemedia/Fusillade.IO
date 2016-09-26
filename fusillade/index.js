@@ -95,17 +95,4 @@ export const fusillade = (parameters = {}) => (
      * Remove Watch
      */
     .then(removeWatch)
-    /**
-     * Exit (0)
-     *//*
-    .then(() => {
-      process.exit()
-    })
-    *//**
-     * Exit (1)
-     *//*
-    .catch((e) => {
-      process.exit(1)
-    })
-    */
 )

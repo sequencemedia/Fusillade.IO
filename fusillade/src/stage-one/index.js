@@ -179,8 +179,5 @@ export const stageOne = ({ log, src, key, ...parameters }) => (
         e,
         models
       })
-      .then(() => {
-        process.exit(1)
-      })
     })
 )

@@ -162,9 +162,6 @@ function cleanJson ({ key, models, ...parameters }) {
         e,
         models
       })
-      .then(() => {
-        process.exit(1)
-      })
     ))
 }
 
@@ -311,9 +308,6 @@ function cleanHtml ({ key, models, ...parameters }) {
         e,
         models
       })
-      .then(() => {
-        process.exit(1)
-      })
     ))
 }
 
@@ -335,9 +329,6 @@ export const cleanUp = ({ key, models, ...parameters }) => (
       logException({
         e,
         models
-      })
-      .then((e) => {
-        process.exit(1)
       })
     ))
 )

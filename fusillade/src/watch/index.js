@@ -125,9 +125,6 @@ export const createWatch = ({ log, models, key, ...parameters }) => (
         e,
         models
       })
-      .then((e) => {
-        process.exit(1)
-      })
     ))
 )
 
@@ -177,9 +174,6 @@ export const removeWatch = ({ watchJson, watchHtml, ...parameters }) => (
       return logException({
         e,
         models
-      })
-      .then((e) => {
-        process.exit(1)
       })
     })
 )
