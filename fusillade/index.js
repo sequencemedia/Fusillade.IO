@@ -103,8 +103,9 @@ export const fusillade = (parameters = {}) => (
     })
     *//**
      * Exit (1)
-     */
+     *//*
     .catch((e) => {
       process.exit(1)
     })
+    */
 )
