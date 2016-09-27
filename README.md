@@ -23,7 +23,7 @@ var fusillade = require('fusillade').fusillade;
 
 fusillade()
   .then(function () { console.log('Done') })
-  .catch(function (e) { console.log('Error, e.message) });
+  .catch(function (e) { console.log('Error', e.message) });
 ```
 It should be configured with a JSON object which resides in your application root:
 ```
