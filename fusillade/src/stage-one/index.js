@@ -39,17 +39,17 @@ const generateFilePathList = ({ log, src, key }) => (
  * @return {Promise}
  */
 const getFilePathList = ({ log, src, key, filePathList }) => (
-  new Promise((success, failure) => {
+  new Promise((resolve, reject) => {
     glob(filePathList, (e, filePathList) => {
       if (!e) {
-        return success({
+        return resolve({
           key,
           src,
           log,
           filePathList
         })
       }
-      failure(e)
+      reject(e)
     })
   })
 )
@@ -90,7 +90,7 @@ function generateRunCmd ({ log, key, filePath }) {
  * @return {Promise}
  */
 const executeRunCmd = ({ run, ...parameters }) => (
-  new Promise((success, failure) => exec(run, (e) => (!e) ? success({ run, ...parameters }) : failure(e)))
+  new Promise((resolve, reject) => exec(run, (e) => (!e) ? resolve({ run, ...parameters }) : reject(e)))
 )
 
 /**
@@ -114,7 +114,7 @@ function generateRepCmd ({ log, key }) {
  * @return {Promise}
  */
 const executeRepCmd = ({ rep, ...parameters }) => (
-  new Promise((success, failure) => exec(rep, (e) => (!e) ? success({ rep, ...parameters }) : failure(e)))
+  new Promise((resolve, reject) => exec(rep, (e) => (!e) ? resolve({ rep, ...parameters }) : reject(e)))
 )
 
 /**

@@ -12,10 +12,10 @@ import {
  * @return {Promise}
  */
 const purgeFilePath = (filePath) => (
-  new Promise((success, failure) => {
+  new Promise((resolve, reject) => {
     fs.stat(filePath, (e) => { //, stat) {
-      if (e) return success(filePath)
-      fs.unlink(filePath, (e) => (!e) ? success(filePath) : failure(e))
+      if (e) return resolve(filePath)
+      fs.unlink(filePath, (e) => (!e) ? resolve(filePath) : reject(e))
     })
   })
 )
@@ -38,9 +38,9 @@ function cleanJson ({ key, models, ...parameters }) {
    * @return {Promise}
    */
   const fetchJsonListModelsNeKey = (key) => (
-    new Promise((success, failure) => {
+    new Promise((resolve, reject) => {
       models.JsonListModel.find({ key: { $ne: key } })
-        .exec((e, array) => (!e) ? success(array) : failure(e))
+        .exec((e, array) => (!e) ? resolve(array) : reject(e))
     })
   )
   /**
@@ -51,9 +51,9 @@ function cleanJson ({ key, models, ...parameters }) {
    * @return {Promise}
    */
   const fetchJsonListModelsEqKey = (key) => (
-    new Promise((success, failure) => {
+    new Promise((resolve, reject) => {
       models.JsonListModel.find({ key })
-        .exec((e, array) => (!e) ? success(array) : failure(e))
+        .exec((e, array) => (!e) ? resolve(array) : reject(e))
     })
   )
 
@@ -104,8 +104,8 @@ function cleanJson ({ key, models, ...parameters }) {
    * @return {Promise}
    */
   const purgeJsonListModel = (model) => (
-    new Promise((success, failure) => {
-      models.JsonListModel.remove({ _id: model.id }, (e) => (!e) ? success() : failure(e))
+    new Promise((resolve, reject) => {
+      models.JsonListModel.remove({ _id: model.id }, (e) => (!e) ? resolve() : reject(e))
     })
   )
 
@@ -183,9 +183,9 @@ function cleanHtml ({ key, models, ...parameters }) {
    * @return {Promise}
    */
   const fetchHtmlListModelsNeKey = (key) => (
-    new Promise((success, failure) => {
+    new Promise((resolve, reject) => {
       models.HtmlListModel.find({ key: { $ne: key } })
-        .exec((e, array) => (!e) ? success(array) : failure(e))
+        .exec((e, array) => (!e) ? resolve(array) : reject(e))
     })
   )
 
@@ -197,9 +197,9 @@ function cleanHtml ({ key, models, ...parameters }) {
    * @return {Promise}
    */
   const fetchHtmlListModelsEqKey = (key) => (
-    new Promise((success, failure) => {
+    new Promise((resolve, reject) => {
       models.HtmlListModel.find({ key })
-        .exec((e, array) => (!e) ? success(array) : failure(e))
+        .exec((e, array) => (!e) ? resolve(array) : reject(e))
     })
   )
 
@@ -250,8 +250,8 @@ function cleanHtml ({ key, models, ...parameters }) {
    * @return {Promise}
    */
   const purgeHtmlListModel = (model) => (
-    new Promise((success, failure) => {
-      models.HtmlListModel.remove({ _id: model.id }, (e) => (!e) ? success() : failure(e))
+    new Promise((resolve, reject) => {
+      models.HtmlListModel.remove({ _id: model.id }, (e) => (!e) ? resolve() : reject(e))
     })
   )
 

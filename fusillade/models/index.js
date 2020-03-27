@@ -22,11 +22,11 @@ export const initialise = () => {
   const uri = nconf.get('mongo:uri')
   const options = nconf.get('mongo:options')
 
-  return new Promise((success, failure) => {
+  return new Promise((resolve, reject) => {
     mongoose.Promise = Promise
     mongoose.connect(uri, { promiseLibrary: Promise, ...options }, (e) => {
       if (!e) {
-        return success({
+        return resolve({
           JsonModel: JsonModel(),
           JsonListModel: JsonListModel(),
           HtmlModel: HtmlModel(),
@@ -34,7 +34,7 @@ export const initialise = () => {
           ExceptionModel: ExceptionModel()
         })
       }
-      failure(e)
+      reject(e)
     })
   })
 }

@@ -1,13 +1,13 @@
 {
+  "env": {
+    "es6": true,
+    "node": true
+  },
   "extends": [
     "standard"
   ],
   "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module"
+    "ecmaVersion": 6
   },
-  "parser": "babel-eslint",
-  "rules": {
-    "promise/param-names": 0
-  }
+  "parser": "babel-eslint"
 }

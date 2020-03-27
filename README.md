@@ -1,4 +1,4 @@
-# Fusillade.IO
+# Fusillade
 
 Fusillade is a Promise interface to the load-testing tool Artillery.
 

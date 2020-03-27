@@ -15,8 +15,8 @@ import moment from 'moment'
  * @return {Promise}
  */
 export const ensure = (path) => (
-  new Promise((success, failure) => {
-    fs.ensureDir(path, (e) => (!e) ? success() : failure(e))
+  new Promise((resolve, reject) => {
+    fs.ensureDir(path, (e) => (!e) ? resolve() : reject(e))
   })
 )
 
@@ -132,8 +132,8 @@ export const generateHtmlPathList = ({ log }) => (
  * @return {Promise}
  */
 export const getJsonFilePathList = ({ filePathList }) => (
-  new Promise((success, failure) => {
-    glob(filePathList, (e, filePathList) => (!e) ? success({ filePathList }) : failure(e))
+  new Promise((resolve, reject) => {
+    glob(filePathList, (e, filePathList) => (!e) ? resolve({ filePathList }) : reject(e))
   })
 )
 
@@ -145,8 +145,8 @@ export const getJsonFilePathList = ({ filePathList }) => (
  * @return {Promise}
  */
 export const getHtmlFilePathList = ({ filePathList }) => (
-  new Promise((success, failure) => {
-    glob(filePathList, (e, filePathList) => (!e) ? success({ filePathList }) : failure(e))
+  new Promise((resolve, reject) => {
+    glob(filePathList, (e, filePathList) => (!e) ? resolve({ filePathList }) : reject(e))
   })
 )
 
@@ -176,13 +176,13 @@ export const mapHtmlFilePathList = ({ filePathList }) => filePathList.map(readHt
  * @return {Promise}
  */
 export const logJsonFilePathList = ({ models, filePathList, key }) => (
-  new Promise((success, failure) => {
+  new Promise((resolve, reject) => {
     const jsonList = new models.JsonListModel({
       filePathList,
       key,
       now: moment().format()
     })
-    jsonList.save((e) => (!e) ? success({ filePathList }) : failure(e))
+    jsonList.save((e) => (!e) ? resolve({ filePathList }) : reject(e))
   })
 )
 
@@ -194,13 +194,13 @@ export const logJsonFilePathList = ({ models, filePathList, key }) => (
  * @return {Promise}
  */
 export const logHtmlFilePathList = ({ models, filePathList, key }) => (
-  new Promise((success, failure) => {
+  new Promise((resolve, reject) => {
     const htmlList = new models.HtmlListModel({
       filePathList,
       key,
       now: moment().format()
     })
-    htmlList.save((e) => (!e) ? success({ filePathList }) : failure(e))
+    htmlList.save((e) => (!e) ? resolve({ filePathList }) : reject(e))
   })
 )
 
@@ -212,7 +212,7 @@ export const logHtmlFilePathList = ({ models, filePathList, key }) => (
  * @return {Promise}
  */
 export const logException = ({ e, models }) => (
-  new Promise((success, failure) => {
+  new Promise((resolve, reject) => {
     const {
       message,
       name,
@@ -228,6 +228,6 @@ export const logException = ({ e, models }) => (
       },
       now: moment().format()
     })
-    exception.save((e) => (!e) ? success() : failure(e))
+    exception.save((e) => (!e) ? resolve() : reject(e))
   })
 )

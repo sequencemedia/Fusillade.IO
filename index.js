@@ -1,3 +1,3 @@
-require('babel-register')({ ignore: /!(fusillade)/ })
+require('@babel/register')
 
 module.exports = require('./fusillade')

@@ -40,12 +40,12 @@ function mail (them) {
   const transport = mailer.createTransport(nconf.get('mailer:transport'))
   const message = nconf.get('mailer:message') || {}
   const subject = (
-      nconf.get('mailer:message:subject') || '{startDate} - {startTime}')
-        .replace(/{startDate}/g, moment().format('Do MMMM YYYY'))
-        .replace(/{startTime}/g, moment().format('HH:mm:ss'))
+    nconf.get('mailer:message:subject') || '{startDate} - {startTime}')
+    .replace(/{startDate}/g, moment().format('Do MMMM YYYY'))
+    .replace(/{startTime}/g, moment().format('HH:mm:ss'))
   const attachments = them.map((file) => ({ filename: path.basename(file.filePath), content: file.htmlFile }))
-  return new Promise((success, failure) => { // return success(them)
-    transport.sendMail({ ...message, subject, attachments }, (e) => (!e) ? success(them) : failure(e))
+  return new Promise((resolve, reject) => {
+    transport.sendMail({ ...message, subject, attachments }, (e) => (!e) ? resolve(them) : reject(e))
   })
 }
 
