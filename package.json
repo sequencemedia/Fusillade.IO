@@ -15,10 +15,10 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
-    "@babel/cli": "^7.12.8",
-    "@babel/core": "^7.12.9",
-    "@babel/preset-env": "^7.12.7",
-    "@babel/register": "^7.12.1",
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "@babel/register": "^7.12.10",
     "artillery": "^1.6.1",
     "fs-extra": "^9.0.1",
     "glob-all": "^3.2.1",
