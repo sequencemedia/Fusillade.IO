@@ -24,7 +24,7 @@
     "glob-all": "^3.2.1",
     "moment": "^2.29.1",
     "mongoose": "^5.11.13",
-    "nconf": "^0.11.1",
+    "nconf": "^0.11.2",
     "nodemailer": "^6.4.17",
     "sacred-fs": "^1.2.1",
     "standard": "^16.0.3"
