@@ -16,8 +16,8 @@
   },
   "dependencies": {
     "@babel/cli": "^7.13.16",
-    "@babel/core": "^7.14.0",
-    "@babel/preset-env": "^7.14.1",
+    "@babel/core": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
     "@babel/register": "^7.13.16",
     "artillery": "^1.7.2",
     "fs-extra": "^10.0.0",
@@ -29,7 +29,7 @@
     "sacred-fs": "^1.2.1"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.13.14",
+    "@babel/eslint-parser": "^7.14.2",
     "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^7.26.0",
     "eslint-import-resolver-babel-module": "^5.3.1",
