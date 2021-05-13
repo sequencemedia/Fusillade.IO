@@ -3,3 +3,9 @@ fusillade/log/html
 fusillade/log/json
 fusillade/src/**/*.json
 config.json
+
+# User-defined NPM configuration
+.npmrc
+
+# User-defined NVM configuration
+.nvmrc
