@@ -23,7 +23,7 @@
     "fs-extra": "^10.0.0",
     "glob-all": "^3.2.1",
     "moment": "^2.29.1",
-    "mongoose": "^5.12.12",
+    "mongoose": "^5.12.13",
     "nconf": "^0.11.2",
     "nodemailer": "^6.6.1",
     "sacred-fs": "^1.2.1"
@@ -31,7 +31,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.4",
     "babel-plugin-module-resolver": "^4.1.0",
-    "eslint": "^7.27.0",
+    "eslint": "^7.28.0",
     "eslint-import-resolver-babel-module": "^5.3.1",
     "standard": "^16.0.3"
   }
