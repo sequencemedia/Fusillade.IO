@@ -15,10 +15,10 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
-    "@babel/cli": "^7.14.3",
-    "@babel/core": "^7.14.3",
-    "@babel/preset-env": "^7.14.4",
-    "@babel/register": "^7.13.16",
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "@babel/register": "^7.14.5",
     "artillery": "^1.7.2",
     "fs-extra": "^10.0.0",
     "glob-all": "^3.2.1",
@@ -29,7 +29,7 @@
     "sacred-fs": "^1.2.1"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.14.4",
+    "@babel/eslint-parser": "^7.14.5",
     "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^7.28.0",
     "eslint-import-resolver-babel-module": "^5.3.1",
