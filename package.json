@@ -25,13 +25,13 @@
     "moment": "^2.29.1",
     "mongoose": "^5.12.14",
     "nconf": "^0.11.2",
-    "nodemailer": "^6.6.1",
+    "nodemailer": "^6.6.2",
     "sacred-fs": "^1.2.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.5",
     "babel-plugin-module-resolver": "^4.1.0",
-    "eslint": "^7.28.0",
+    "eslint": "^7.29.0",
     "eslint-import-resolver-babel-module": "^5.3.1",
     "standard": "^16.0.3"
   }
